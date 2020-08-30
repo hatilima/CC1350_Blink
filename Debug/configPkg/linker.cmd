@@ -9,8 +9,8 @@
  */
 
 
--l"C:\Users\Jasper\workspace_v9\Blink1_GPIO_toggle\Debug\configPkg\package\cfg\hello_pem3.oem3"
--l"C:\Users\Jasper\workspace_v9\Blink1_GPIO_toggle\src\sysbios\rom_sysbios.aem3"
+-l"C:\Users\Jasper\workspace_v9\CC1350_Blink1_GPIO_toggle\Debug\configPkg\package\cfg\hello_pem3.oem3"
+-l"C:\Users\Jasper\workspace_v9\CC1350_Blink1_GPIO_toggle\src\sysbios\rom_sysbios.aem3"
 -l"C:\ti\simplelink_cc13x0_sdk_3_20_00_23\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\boot.aem3"
 -l"C:\ti\simplelink_cc13x0_sdk_3_20_00_23\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\auto_init.aem3"
 -l"C:\ti\ccs930\xdctools_3_60_02_34_core\packages\xdc\rov\runtime\lib\xdc.rov.runtime.aem3"

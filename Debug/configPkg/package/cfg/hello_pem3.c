@@ -1638,7 +1638,7 @@ __FAR__ const xdc_SizeT ti_sysbios_knl_Task_Module_State_terminatedQ__O = offset
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = C:/Users/Jasper/workspace_v9/Blink1_GPIO_toggle/Debug/configPkg/package/cfg/hello_pem3");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/Users/Jasper/workspace_v9/CC1350_Blink1_GPIO_toggle/Debug/configPkg/package/cfg/hello_pem3");
 
 /*
  *  ======== __ISA__ ========

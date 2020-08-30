@@ -1,6 +1,6 @@
 #
 # This file was generated based on the configuration script:
-#     C:\Users\Jasper\workspace_v9\Blink1_GPIO_toggle\hello.cfg
+#     C:\Users\Jasper\workspace_v9\CC1350_Blink1_GPIO_toggle\hello.cfg
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -14,7 +14,7 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
-#    C:\Users\Jasper\workspace_v9\Blink1_GPIO_toggle\src
+#    C:\Users\Jasper\workspace_v9\CC1350_Blink1_GPIO_toggle\src
 #
 GEN_SRC_DIR ?= ../src
 

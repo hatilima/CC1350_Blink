@@ -130,34 +130,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Blink1_GPIO_toggle.out \
+CC1350_Blink1_GPIO_toggle.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Blink1_GPIO_toggle.out" \
+"CC1350_Blink1_GPIO_toggle.out" \
 
 BIN_OUTPUTS += \
-Blink1_GPIO_toggle.hex \
+CC1350_Blink1_GPIO_toggle.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"Blink1_GPIO_toggle.hex" \
+"CC1350_Blink1_GPIO_toggle.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Blink1_GPIO_toggle.out"
+	@$(MAKE) --no-print-directory -Onone "CC1350_Blink1_GPIO_toggle.out"
 
 # Tool invocations
-Blink1_GPIO_toggle.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+CC1350_Blink1_GPIO_toggle.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --define=DeviceFamily_CC13X0 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"Blink1_GPIO_toggle.map" -i"C:/ti/simplelink_cc13x0_sdk_3_20_00_23/source" -i"C:/ti/simplelink_cc13x0_sdk_3_20_00_23/kernel/tirtos/packages" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Blink1_GPIO_toggle_linkInfo.xml" --rom_model -o "Blink1_GPIO_toggle.out" $(ORDERED_OBJS)
+	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --define=DeviceFamily_CC13X0 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"CC1350_Blink1_GPIO_toggle.map" -i"C:/ti/simplelink_cc13x0_sdk_3_20_00_23/source" -i"C:/ti/simplelink_cc13x0_sdk_3_20_00_23/kernel/tirtos/packages" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CC1350_Blink1_GPIO_toggle_linkInfo.xml" --rom_model -o "CC1350_Blink1_GPIO_toggle.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-Blink1_GPIO_toggle.hex: $(EXE_OUTPUTS)
+CC1350_Blink1_GPIO_toggle.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armhex"  -o "Blink1_GPIO_toggle.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armhex"  -o "CC1350_Blink1_GPIO_toggle.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
