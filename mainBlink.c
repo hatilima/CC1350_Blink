@@ -44,7 +44,7 @@ void workTaskFunc(UArg arg0, UArg arg1)
     while (1)
     {
         GPIO_toggle(Board_GPIO_LED0);
-        myDelay(2400000);
+        myDelay(2500000);
     }
 }
 
