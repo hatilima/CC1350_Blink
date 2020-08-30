@@ -14,10 +14,6 @@
 #include <ti/drivers/GPIO.h>
 #include "Board.h"
 
-/*
- *  ======== main ========
- */
-
 
 /* TI-RTOS Header files */
 
@@ -27,9 +23,11 @@
 
 void myDelay(int count);
 
-/* Could be anything, like computing primes */
+/* Could be anything, like computing primes
 #define FakeBlockingSlowWork()   myDelay(1200000)
 #define FakeBlockingFastWork()   myDelay(2000000)
+*/
+
 
 Task_Struct workTask;
 /* Make sure we have nice 8-byte alignment on the stack to avoid wasting memory */
@@ -43,8 +41,8 @@ void workTaskFunc(UArg arg0, UArg arg1)
 {
     while (1)
     {
-        GPIO_toggle(Board_GPIO_LED0);
-        myDelay(2500000);
+        GPIO_toggle(Board_GPIO_LED1);
+        myDelay(9000000);
     }
 }
 
