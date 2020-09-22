@@ -2,6 +2,7 @@
  *  ======== hello.c ========
  */
 
+
 /* XDC Module Headers */
 #include <xdc/std.h>
 #include <xdc/runtime/System.h>
@@ -13,6 +14,7 @@
 #include <ti/drivers/PIN.h>
 #include <ti/drivers/GPIO.h>
 #include "Board.h"
+#include "Trial.h"
 
 
 /* TI-RTOS Header files */
@@ -21,17 +23,19 @@
 
 
 
-void myDelay(int count);
+extern "C" void myDelay(int count);
 
 /* Could be anything, like computing primes
 #define FakeBlockingSlowWork()   myDelay(1200000)
 #define FakeBlockingFastWork()   myDelay(2000000)
 */
 
+Trial lights;
 
 Task_Struct workTask;
 /* Make sure we have nice 8-byte alignment on the stack to avoid wasting memory */
-#pragma DATA_ALIGN(workTaskStack, 8)
+#pragma align(8)
+//#pragma DATA_ALIGN(workTaskStack, 8)
 #define STACKSIZE 1024
 static uint8_t workTaskStack[STACKSIZE];
 
@@ -41,7 +45,8 @@ void workTaskFunc(UArg arg0, UArg arg1)
 {
     while (1)
     {
-        GPIO_toggle(Board_GPIO_LED1);
+//        GPIO_toggle(Board_GPIO_LED1);
+        lights.blink();
         myDelay(9000000);
     }
 }
@@ -56,6 +61,7 @@ int main(void)
     GPIO_init();
 
 
+
     /* Set up the led task */
     Task_Params workTaskParams;
     Task_Params_init(&workTaskParams);
@@ -67,6 +73,7 @@ int main(void)
 
     /* Start kernel. */
     BIOS_start();
+
 
     return (0);
 }

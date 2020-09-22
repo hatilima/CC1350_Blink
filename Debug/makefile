@@ -12,6 +12,7 @@ GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 ORDERED_OBJS += \
 "./CC1350_LAUNCHXL.obj" \
 "./CC1350_LAUNCHXL_fxns.obj" \
+"./Trial.obj" \
 "./ccfg.obj" \
 "./mainBlink.obj" \
 "../CC1350_LAUNCHXL_TIRTOS.cmd" \
@@ -164,8 +165,9 @@ CC1350_Blink1_GPIO_toggle.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "CC1350_LAUNCHXL.obj" "CC1350_LAUNCHXL_fxns.obj" "ccfg.obj" "mainBlink.obj" 
-	-$(RM) "CC1350_LAUNCHXL.d" "CC1350_LAUNCHXL_fxns.d" "ccfg.d" "mainBlink.d" 
+	-$(RM) "CC1350_LAUNCHXL.obj" "CC1350_LAUNCHXL_fxns.obj" "Trial.obj" "ccfg.obj" "mainBlink.obj" 
+	-$(RM) "CC1350_LAUNCHXL.d" "CC1350_LAUNCHXL_fxns.d" "ccfg.d" 
+	-$(RM) "Trial.d" "mainBlink.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

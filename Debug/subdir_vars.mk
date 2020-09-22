@@ -8,14 +8,17 @@ SHELL = cmd.exe
 CFG_SRCS += \
 ../hello.cfg 
 
+CPP_SRCS += \
+../Trial.cpp \
+../mainBlink.cpp 
+
 CMD_SRCS += \
 ../CC1350_LAUNCHXL_TIRTOS.cmd 
 
 C_SRCS += \
 ../CC1350_LAUNCHXL.c \
 ../CC1350_LAUNCHXL_fxns.c \
-../ccfg.c \
-../mainBlink.c 
+../ccfg.c 
 
 GEN_CMDS += \
 ./configPkg/linker.cmd 
@@ -30,8 +33,7 @@ GEN_MISC_DIRS += \
 C_DEPS += \
 ./CC1350_LAUNCHXL.d \
 ./CC1350_LAUNCHXL_fxns.d \
-./ccfg.d \
-./mainBlink.d 
+./ccfg.d 
 
 GEN_OPTS += \
 ./configPkg/compiler.opt 
@@ -39,8 +41,13 @@ GEN_OPTS += \
 OBJS += \
 ./CC1350_LAUNCHXL.obj \
 ./CC1350_LAUNCHXL_fxns.obj \
+./Trial.obj \
 ./ccfg.obj \
 ./mainBlink.obj 
+
+CPP_DEPS += \
+./Trial.d \
+./mainBlink.d 
 
 GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
@@ -48,13 +55,17 @@ GEN_MISC_DIRS__QUOTED += \
 OBJS__QUOTED += \
 "CC1350_LAUNCHXL.obj" \
 "CC1350_LAUNCHXL_fxns.obj" \
+"Trial.obj" \
 "ccfg.obj" \
 "mainBlink.obj" 
 
 C_DEPS__QUOTED += \
 "CC1350_LAUNCHXL.d" \
 "CC1350_LAUNCHXL_fxns.d" \
-"ccfg.d" \
+"ccfg.d" 
+
+CPP_DEPS__QUOTED += \
+"Trial.d" \
 "mainBlink.d" 
 
 GEN_FILES__QUOTED += \
@@ -64,7 +75,10 @@ GEN_FILES__QUOTED += \
 C_SRCS__QUOTED += \
 "../CC1350_LAUNCHXL.c" \
 "../CC1350_LAUNCHXL_fxns.c" \
-"../ccfg.c" \
-"../mainBlink.c" 
+"../ccfg.c" 
+
+CPP_SRCS__QUOTED += \
+"../Trial.cpp" \
+"../mainBlink.cpp" 
 
 
