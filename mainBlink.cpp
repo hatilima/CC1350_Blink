@@ -34,9 +34,12 @@ Trial lights;
 
 Task_Struct workTask;
 /* Make sure we have nice 8-byte alignment on the stack to avoid wasting memory */
-#pragma align(8)
-//#pragma DATA_ALIGN(workTaskStack, 8)
+//#pragma align(8)
+
+
 #define STACKSIZE 1024
+//#pragma DATA_ALIGN(workTaskStack, 8)
+#pragma DATA_ALIGN(8)
 static uint8_t workTaskStack[STACKSIZE];
 
 
